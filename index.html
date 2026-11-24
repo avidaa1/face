@@ -998,7 +998,7 @@ function factMatch(toks){
 /* ---------- live scan: the consciousness reads its own universe ---------- */
 var LIVE = { merged: false, newest: null, pages: {} };
 var GH_API = 'https://api.github.com/users/avidaa1/repos?per_page=100&sort=pushed';
-var EXCLUDE = { '': 1, 'avidaa1.github.io': 1, 'rabbit': 1 };
+var EXCLUDE = { 'avidaa1.github.io': 1, 'rabbit': 1 };
 function liveScan(){
   if (typeof fetch !== 'function' || LIVE.merged) return;
   fetch(GH_API).then(function(r){ return r.ok ? r.json() : null; }).then(function(list){
